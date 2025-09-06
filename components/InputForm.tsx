@@ -9,13 +9,13 @@ interface InputFormProps {
   setKeywords: (keywords: string) => void;
 }
 
-const inputStyles = "w-full bg-slate-700/50 border border-gray-600 rounded-md shadow-sm py-2 px-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition duration-150 ease-in-out";
+const inputStyles = "w-full bg-gray-50 border border-gray-300 rounded-md shadow-sm py-2 px-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-150 ease-in-out";
 
 const InputForm: React.FC<InputFormProps> = ({ name, setName, contactInfo, setContactInfo, keywords, setKeywords }) => {
   return (
     <div className="space-y-6 w-full">
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-orange-400 mb-2">
+        <label htmlFor="name" className="block text-sm font-medium text-slate-600 mb-2">
           Full Name
         </label>
         <input 
@@ -28,7 +28,7 @@ const InputForm: React.FC<InputFormProps> = ({ name, setName, contactInfo, setCo
         />
       </div>
       <div>
-        <label htmlFor="contact" className="block text-sm font-medium text-orange-400 mb-2">
+        <label htmlFor="contact" className="block text-sm font-medium text-slate-600 mb-2">
           Contact Info (Phone or Email)
         </label>
         <input 
@@ -41,7 +41,7 @@ const InputForm: React.FC<InputFormProps> = ({ name, setName, contactInfo, setCo
         />
       </div>
       <div>
-        <label htmlFor="keywords" className="block text-sm font-medium text-orange-400 mb-2">
+        <label htmlFor="keywords" className="block text-sm font-medium text-slate-600 mb-2">
           Skills & Keywords (one per line)
         </label>
         <textarea 

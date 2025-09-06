@@ -7,17 +7,17 @@ export const generateLinkedInBackground = async (name: string, contactInfo: stri
     const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
     const prompt = `
-    Generate a professional LinkedIn banner background image with a 16:9 aspect ratio. The design must be minimalist, clean, and corporate, featuring abstract geometric shapes and a sophisticated color palette of dark charcoal, vibrant orange, golden yellow, and crisp white.
+    Generate a light, airy, professional LinkedIn banner background image with a 16:9 aspect ratio. The design must be minimalist, clean, and corporate, using a sophisticated color palette of professional blues, clean whites, and soft grays.
 
-    In the horizontal and vertical center of the banner, place the following text in a modern, bold, sans-serif font:
+    In the horizontal and vertical center of the banner, place the following text in a modern, bold, sans-serif font (color: dark gray or charcoal):
     Line 1: '${name}'
     Line 2: '${contactInfo}' (use the same font but smaller and regular weight, placed directly below the name).
-    Ensure the text is perfectly centered and highly legible against the background.
+    Ensure the text is perfectly centered and highly legible against the light background.
 
-    On the far right side of the banner, create a vertically aligned list of the following keywords. The text should be aligned to the right, in a clean, legible, regular-weight sans-serif font.
+    On the far right side of the banner, create a vertically aligned list of the following keywords. The text should be aligned to the right, in a clean, legible, regular-weight sans-serif font (color: a slightly lighter gray).
     ${keywords.map(k => `- ${k}`).join('\n')}
 
-    The overall aesthetic must be professional, uncluttered, and suitable for a professional profile. Do not include any photographic elements, human figures, or complex illustrations. Focus on a polished, abstract design.
+    The overall aesthetic must be professional, uncluttered, and suitable for a modern corporate profile. Do not include any photographic elements, human figures, or complex illustrations. Focus on a polished, abstract design with clean lines or subtle gradients.
     `;
 
 
